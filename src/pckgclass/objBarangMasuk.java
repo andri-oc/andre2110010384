@@ -1,23 +1,25 @@
 package pckgclass;
 
 import java.util.Date;
-import java.util.function.Supplier;
 
-class BarangMasuk {
+public class objBarangMasuk {
     private int noBarangMasuk;
     private objBarang barang;
-    private Supplier supplier;
+    private objSupplier supplier;
     private int jumlah;
     private Date tanggalMasuk;
     // private int total;
 
     // construcktor Barang Masuk
-    BarangMasuk(int noBarangMasuk, objBarang barang, Supplier supplier, int jumlah, Date tanggalMasuk) {
+    objBarangMasuk(int noBarangMasuk, objBarang barang, objSupplier supplier, int jumlah, Date tanggalMasuk) {
         this.noBarangMasuk = noBarangMasuk;
         this.barang = barang;
         this.supplier = supplier;
-        this.jumlah = jumlah;
+        this.jumlah += jumlah;
         this.tanggalMasuk = tanggalMasuk;
+    }
+
+    public objBarangMasuk() {
     }
 
     // Method get dan set barang masuk
@@ -39,11 +41,11 @@ class BarangMasuk {
     }
 
     // method set dan get supplier
-    public Supplier getSupplier() {
+    public objSupplier getSupplier() {
         return supplier;
     }
 
-    public void setSupplier(Supplier supplier) {
+    public void setSupplier(objSupplier supplier) {
         this.supplier = supplier;
     }
 

@@ -3,24 +3,27 @@ package pckgclass;
 import java.util.Date;
 
 public class BarangKeluar {
-    private int barangKeluarId;
+    private int kodeBarangKeluar;
     private objBarang barang;
     private int jumlah;
     private Date tanggalKeluar;
 
-    BarangKeluar(int barangKeluarId, objBarang barang, int jumlah, Date tanggalKeluar) {
-        this.barangKeluarId = barangKeluarId;
+    BarangKeluar(int kodeBarangKeluar, objBarang barang, int jumlah, Date tanggalKeluar) {
+        this.kodeBarangKeluar = kodeBarangKeluar;
         this.barang = barang;
-        this.jumlah = jumlah;
+        this.jumlah += jumlah;
         this.tanggalKeluar = tanggalKeluar;
     }
 
-    public int getBarangKeluarId() {
-        return barangKeluarId;
+    public BarangKeluar() {
     }
 
-    public void setBarangKeluarId(int barangKeluarId) {
-        this.barangKeluarId = barangKeluarId;
+    public int getKodeBarangKeluar() {
+        return kodeBarangKeluar;
+    }
+
+    public void setKodeBarangKeluar(int kodeBarangKeluar) {
+        this.kodeBarangKeluar = kodeBarangKeluar;
     }
 
     public objBarang getBarang() {
